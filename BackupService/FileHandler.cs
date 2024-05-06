@@ -4,7 +4,7 @@
     {
         public BackupService()
         {
-          
+
 
         }
 
@@ -13,7 +13,7 @@
         {
             public int DirectoryId { get; set; }
             public string? DirectoryName { get; set; }
-            public string? DestinationFolder { get; set; }    
+            public string? DestinationFolder { get; set; }
         }
 
 
@@ -27,7 +27,7 @@
             directories.Add(new DirectoryPath { DirectoryName = "", DestinationFolder = "", DirectoryId = 2 });
             directories.Add(new DirectoryPath { DirectoryName = "", DestinationFolder = "", DirectoryId = 3 });
 
-          try
+            try
             {
                 foreach (var directoryList in directories)
                 {
@@ -47,7 +47,7 @@
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 throw;
@@ -60,14 +60,17 @@
             {
                 if (Directory.Exists(directoryPath))
                 {
-                    string[] searchPatterns = { "*.csv", "*.xlsx", "*.xls" };
-                    List<string> fileList = new List<string>();
 
-                    foreach (string searchPattern in searchPatterns)
-                    {
-                        fileList.AddRange(Directory.GetFiles(directoryPath, searchPattern, System.IO.SearchOption.AllDirectories));
-                    }
-                    return fileList.ToArray();
+                    //string[] searchPatterns = { "*.csv", "*.xlsx", "*.xls", "*.txt", "*.docx", "*.pdf", "*.pptx", "*.zip" };
+
+                    //List<string> fileList = new List<string>();
+
+                    //foreach (string searchPattern in searchPatterns)
+                    //{
+                    //    fileList.AddRange(Directory.GetFiles(directoryPath, searchPattern, System.IO.SearchOption.AllDirectories));
+                    //}
+                    //return fileList.ToArray();
+                    return Directory.GetFileSystemEntries(directoryPath, "*", System.IO.SearchOption.AllDirectories);
                 }
                 else
                 {
@@ -77,7 +80,7 @@
             catch (Exception ex)
             {
                 //log the error    
-            throw;
+                throw;
             }
         }
 
@@ -86,21 +89,44 @@
             foreach (string file in files)
             {
                 FileInfo fileInfo = new FileInfo(file);
-                string originalFile = $"{destinationDirectory}\\Original"; 
-                string originalFilePath = Path.Combine($"{destinationDirectory}\\Original", fileInfo.Name);
-   
-                // create path if not exist
-                Directory.CreateDirectory(originalFile);
-                Directory.CreateDirectory(destinationDirectory); 
-                // Check if the file already exists in the destination directory
-                if (!File.Exists(originalFilePath))
+                string targetFilePath = $"{destinationDirectory}\\Original";
+                string fileNameWithPath = Path.Combine($"{destinationDirectory}\\Original", fileInfo.Name);
+
+                // create the target file path and destination directory if they don't exist
+
+                if (!Directory.Exists(destinationDirectory))
                 {
-                    File.Copy(file, originalFilePath);
+                    Directory.CreateDirectory(destinationDirectory);
+                }
+
+                if (!Directory.Exists(targetFilePath))
+                {
+                    Directory.CreateDirectory(targetFilePath);
+                }
+
+                // Check if the file already exists in the destination directory
+                if (!File.Exists(fileNameWithPath))
+                {
+                    File.Copy(file, fileNameWithPath);
+                    GoogleDriveBackup(fileNameWithPath);
                 }
                 else
                 {
-                 //add logging
+                    //add logging
                 }
+            }
+        }
+
+        public void GoogleDriveBackup(string fileName)
+        {
+            try
+            {
+                Console.WriteLine($"File: {fileName} has been succesfully backed up to Google Drive");
+            }
+            catch(Exception ex)
+            {
+                //log error
+                throw; 
             }
         }
 
