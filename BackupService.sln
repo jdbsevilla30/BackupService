@@ -4,13 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File Backup Service", "File Backup Service\File Backup Service.csproj", "{C8368975-9D46-4B6C-BC49-90E1DCB7D1DD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{AC86D4DF-22BE-4406-89C6-F8747BB388D7} = {AC86D4DF-22BE-4406-89C6-F8747BB388D7}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackupService", "BackupService\BackupService.csproj", "{F17A1312-5B88-41C4-AEF5-2577D50B7429}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataSource", "DataSource\DataSource.csproj", "{AC86D4DF-22BE-4406-89C6-F8747BB388D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C8368975-9D46-4B6C-BC49-90E1DCB7D1DD} = {C8368975-9D46-4B6C-BC49-90E1DCB7D1DD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
