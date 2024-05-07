@@ -1,4 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using File_Backup_Service.Repositories;
+using File_Backup_Service.Interface;
+using BackupService.Data.Model.BackupService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<FileBackupServiceContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

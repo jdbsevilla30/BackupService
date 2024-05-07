@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace File_Backup_Service.Model.BackupService;
+namespace BackupService.Data.Model.BackupService;
 
 public partial class FileDirectory
 {

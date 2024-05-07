@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace File_Backup_Service.Model.BackupService;
+namespace BackupService.Data.Model.BackupService;
 
 public partial class FileBackupServiceContext : DbContext
 {

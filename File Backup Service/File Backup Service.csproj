@@ -20,11 +20,11 @@
 
   <ItemGroup>
     <Folder Include="DataManager\" />
-    <Folder Include="Model\" />
     <Folder Include="SQLQueries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BackupService.Data\BackupService.Data.csproj" />
     <ProjectReference Include="..\BackupService\BackupService.csproj" />
   </ItemGroup>
 
