@@ -2,7 +2,8 @@
 {
     public class FileDirectoryDto
     {
-        public int DirectoryId { get; set; }
+        public int ID { get; set; }
         public string DirectoryName { get; set; }
+        public string DestinationFolder { get; set; }
     }
 }
