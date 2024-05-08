@@ -10,8 +10,6 @@ namespace File_Backup_Service.Helper
         {
             //file backup service mapping
             CreateMap<FileDirectoryDto, FileDirectory>();
-            
-         
         }
 
 
