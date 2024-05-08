@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Backup Service", "File Backup Service\File Backup Service.csproj", "{C8368975-9D46-4B6C-BC49-90E1DCB7D1DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File Backup Service", "File Backup Service\File Backup Service.csproj", "{C8368975-9D46-4B6C-BC49-90E1DCB7D1DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupService", "BackupService\BackupService.csproj", "{F17A1312-5B88-41C4-AEF5-2577D50B7429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackupService", "BackupService\BackupService.csproj", "{F17A1312-5B88-41C4-AEF5-2577D50B7429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource", "DataSource\DataSource.csproj", "{AC86D4DF-22BE-4406-89C6-F8747BB388D7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupService.Data", "BackupService.Data\BackupService.Data.csproj", "{C36C13E2-092B-4463-838A-16A434DCF302}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupService.Data", "BackupService.Data\BackupService.Data.csproj", "{6D07D0BE-6CD6-4631-91FC-769FEC3111B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,10 @@ Global
 		{F17A1312-5B88-41C4-AEF5-2577D50B7429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F17A1312-5B88-41C4-AEF5-2577D50B7429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F17A1312-5B88-41C4-AEF5-2577D50B7429}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC86D4DF-22BE-4406-89C6-F8747BB388D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC86D4DF-22BE-4406-89C6-F8747BB388D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC86D4DF-22BE-4406-89C6-F8747BB388D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC86D4DF-22BE-4406-89C6-F8747BB388D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C36C13E2-092B-4463-838A-16A434DCF302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C36C13E2-092B-4463-838A-16A434DCF302}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C36C13E2-092B-4463-838A-16A434DCF302}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C36C13E2-092B-4463-838A-16A434DCF302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D07D0BE-6CD6-4631-91FC-769FEC3111B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D07D0BE-6CD6-4631-91FC-769FEC3111B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D07D0BE-6CD6-4631-91FC-769FEC3111B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D07D0BE-6CD6-4631-91FC-769FEC3111B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
